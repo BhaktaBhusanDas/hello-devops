@@ -4,7 +4,7 @@ A trivial web service that returns "Hello, DevOps!" on '/', built for demonstrat
 
 ## Prequsites
 
-- Docker (Engine && CLI) installed.
+- Docker (Engine & CLI) installed.
 - (optional) Python 3.8+ if you want to run without Docker
 - Git
 
