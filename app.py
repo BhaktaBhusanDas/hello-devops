@@ -1,10 +1,11 @@
-from flask import Flask
+from flask import Flask, Response
 
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Hello, DevOps!"
+    text = "Hello DevOps!\nVersion: 2"
+    return Response(text, mimetype="text/plain")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080)
