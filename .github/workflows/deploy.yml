@@ -42,16 +42,17 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ec2-user
           key: ${{ secrets.EC2_SSH_KEY }}
-        script: |
-          # Pull the image you just pushed
-          docker pull bhaktabhusandas/hello-devops-flask:latest
+          port: ${{ secrets.EC2_PORT }}
+          script: |
+            # Pull the image you just pushed
+            docker pull bhaktabhusandas/hello-devops-flask:latest
 
-          # Stop & remove old container
-          docker stop hello-devops  || true
-          docker rm   hello-devops  || true
+            # Stop & remove old container
+            docker stop hello-devops  || true
+            docker rm   hello-devops  || true
 
-          # Run new container
-          docker run -d \
+            # Run new container
+            docker run -d \
             --name hello-devops \
             -p 8080:8080 \
             bhaktabhusandas/hello-devops-flask:latest
