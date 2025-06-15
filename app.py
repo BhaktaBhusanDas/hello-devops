@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    text = "Hello DevOps!\nVersion: 3"
+    text = "Hello DevOps!\nVersion: 4"
     return Response(text, mimetype="text/plain")
 
 if __name__ == "__main__":
