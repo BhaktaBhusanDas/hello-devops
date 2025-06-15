@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:800i&display=swap');
 
-html, body {
+html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Nunito', sans-serif;
   font-size: 40px;
   background: #fffcc1;
+  transition: 500ms;
 }
 
 * {

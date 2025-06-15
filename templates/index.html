@@ -6,6 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hello DevOps</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/toggle.css') }}" />
+  <style>
+  html.light-mode {
+    background-color: white;
+    color: black;
+  }
+
+  html.dark-mode {
+    background-color: black;
+    color: white;
+  }
+</style>
+
 </head>
   
   <body>
@@ -32,6 +44,27 @@
         <span class="star star-8"></span>
       </label>
     </div>
+
+<script>
+  const checkbox = document.getElementById('hide-checkbox');
+
+  checkbox.addEventListener('change', () => {
+    if (checkbox.checked) {
+      document.documentElement.classList.add('light-mode');
+      document.documentElement.classList.remove('dark-mode');
+    } else {
+      document.documentElement.classList.add('dark-mode');
+      document.documentElement.classList.remove('light-mode');
+    }
+  });
+
+  window.onload = () => {
+    checkbox.checked = false;
+    document.documentElement.classList.add('dark-mode');
+  };
+</script>
+
+
   </body>
  
 </html>
