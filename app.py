@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     # prepare your raw text
-    text = "Hello DevOps!\nVersion: 8"
+    text = "Hello DevOps!\nVersion: 10"
     # pass it into the template
     return render_template("index.html", text=text)
 
